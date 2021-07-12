@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{>head title=this.title }}
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {{>header}}
+    <img width=1000px src="circuit-smartwatering.jpg"/>
+    <H1> Cac noi dung trong trang web</H1>
+        <ul>
+            {{#each people}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    {{>footer}}
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+
+<style> 
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIXN4ty7JTDAOxDMlY4L6s_8nDh_PB2w06Q&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table{
+    display: table-header-group;
+}
+
+td{
+    width: 100px;
+}
+</style>
+
+<body>
+    {{>header  title=this.title}}
+    <main>
+        <H1>{{title}}</H1>
+        <h1 style="text-align: center;">Login Page</h1>
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" id="txtUser"> </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" id="txtPass"> </td>
+            </tr>
+        </table>
+        <button onclick="login()">Login</button>
+
+        
+    </main>
+
+    {{>footer}}
+
+    <script>
+    var user = document.getElementById("txtUser").value;
+    var pass = document.getElementById("txtPass").value;
+
+    function login(){
+        alert('failed');
+        if(user = "admin" && pass = "123456"){
+            alert('success');
+        }
+     }
+</script>
+</body>
+
+</html>

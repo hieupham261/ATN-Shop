@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page Product' }}
+
+<style> 
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIXN4ty7JTDAOxDMlY4L6s_8nDh_PB2w06Q&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+td{
+    width: 400px;
+}
+</style>
+
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <H1>{{title}}</H1>
+        <h1 style="text-align: center;">Product Page</h1>
+                <ol>
+                    {{#each product}}
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="{{ImgLink}}" height="300px"></himg>
+                            </td>
+                            <td >  
+                                <h5>{{Product_Name}} </h5>
+                                <h5>Price: {{Price}}</h5>
+                                <h5>Infor: {{Description}}</h5>
+                            </td>
+                            <td> <button style="padding-right: 100px;">Add to Cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                               
+                            </td>
+                        </tr>
+                    </table>
+                    {{/each}}
+                </ol>
+    </main>
+    
+
+    {{>footer}}
+</body>
+
+</html>
