@@ -51,8 +51,7 @@ Router.get("/" , getHome);
 
 function getHome( req , res ){
     // res.sendFile(__dirname + "/view/home.html");
-    let peopleList = ["A1","A2"];
-    res.render("home", {people : peopleList, title : "Home Page"});
+    res.render("home");
 }
 
 // Profile 
