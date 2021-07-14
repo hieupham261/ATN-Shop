@@ -24,34 +24,24 @@ td{
     <main>
         <H1>{{title}}</H1>
         <h1 style="text-align: center;">Login Page</h1>
+
         <table>
             <tr>
-                <td>Username: </td>
-                <td><input type="text" id="txtUser"> </td>
+                <td><label for="Username">Username</label></td>
+                <td><input type="text" name="Username" id="Username" placeholder="Username"></td>
             </tr>
             <tr>
-                <td>Password: </td>
-                <td><input type="password" id="txtPass"> </td>
+                <td><label for="password">password</label></td>
+                <td><input type="password" name="Password" id="Password" placeholder="Password"/></td>
             </tr>
-        </table>
-        <button onclick="login()">Login</button>
-
-        
+            <tr>
+                <td><a href="/product"><input type="button" value="Login"/></a></td>
+            </tr>
+        </table>    
     </main>
 
     {{>footer}}
 
-    <script>
-    var user = document.getElementById("txtUser").value;
-    var pass = document.getElementById("txtPass").value;
-
-    function login(){
-        alert('failed');
-        if(user = "admin" && pass = "123456"){
-            alert('success');
-        }
-     }
-</script>
 </body>
 
 </html>

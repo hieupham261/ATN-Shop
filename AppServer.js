@@ -17,6 +17,7 @@ xPORT = process.env.PORT || 3000;
 // ROUTING toi chuc nang
 const app = express();
 const Router = express.Router(); 
+const ProductController = require("./controller/ProductController");
 
 // Cấu hình MVC + Engine - View
 app.set("views", path.join(__dirname, "view")); //setting views directory for views.
@@ -51,7 +52,8 @@ Router.get("/" , getHome);
 
 function getHome( req , res ){
     // res.sendFile(__dirname + "/view/home.html");
-    res.render("home");
+    res.render("product");
+    app.use("/product",ProductController);
 }
 
 // Profile 
@@ -59,7 +61,6 @@ function getHome( req , res ){
 // app.use("/profile",ProfileController);
 
 // Product
-const ProductController = require("./controller/ProductController");
 app.use("/product",ProductController);
 
 // Login

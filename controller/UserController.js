@@ -13,5 +13,20 @@ async function getUser(req, res){
     res.render("login", {user : userlist, title: "This is Login Page"});
 }
 
+router.get('/login', function(req, res, next) {
+    res.render('product');
+    });
+
+router.post('/login', function(req,res,next){
+    console.log(userlist);
+    if(req.body.Username == Username && req.body.Password == Password){
+         res.redirect('/product'); // Redirect to /welcome if success
+    }
+    else {
+         res.redirect('/login'); // Redirect to /login if login fail
+    }
+
+});
+
 //// export
 module.exports = router;

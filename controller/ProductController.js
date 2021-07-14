@@ -14,6 +14,8 @@ async function getProduct(req, res){
     res.render("product", {product : productlist, title: "This is Product Page"});
 }
 
+
+
 //// -new
 router.get("/new", getNewProduct);
 
