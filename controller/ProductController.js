@@ -10,7 +10,6 @@ router.get("/", getProduct);
 
 async function getProduct(req, res){
     var productlist = await Product.find({});
-    console.log(productlist);
     res.render("product", {product : productlist, title: "This is Product Page"});
 }
 
@@ -20,7 +19,7 @@ async function getProduct(req, res){
 router.get("/new", getNewProduct);
 
 function getNewProduct(req, res){
-    res.render("product-new", {title: "This is Product Page"});
+    res.render("product-new");
 }
 
 //// -create /// POST

@@ -1,10 +1,12 @@
 var express = require('express');
-var router = express.router;
+var router = express.Router();
+
+const mongoose = require("mongoose");
 
 router.get("/", getProfile);
 
-function getProfile(req, res){
-    res.render("Profile", {title: "This is Profile Page"});
+async function getProfile(req, res){
+    res.render("profile", {title: "This is Profile Page"});
 }
 
 module.exports = router;

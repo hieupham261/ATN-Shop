@@ -51,14 +51,12 @@ app.use(
 Router.get("/" , getHome);
 
 function getHome( req , res ){
-    // res.sendFile(__dirname + "/view/home.html");
-    res.render("product");
-    app.use("/product",ProductController);
+    res.render("home");
 }
 
 // Profile 
-// const ProfileController = require("./controller/ProfileController");
-// app.use("/profile",ProfileController);
+const ProfileController = require("./controller/ProfileController");
+app.use("/profile",ProfileController);
 
 // Product
 app.use("/product",ProductController);

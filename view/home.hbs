@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-{{>head title=this.title subpage='Page X' }}
+{{>head title=this.title subpage='ATN Shop' }}
+<style>
+    body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIXN4ty7JTDAOxDMlY4L6s_8nDh_PB2w06Q&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    top: 250px;
+    text-align: center;
+    position: relative;
+}
+
+</style>
 
 <body>
-    {{>header  title=this.title}}
-
     <main>
-        <H1>{{title}}</H1>
-        <div>
-            <p>
-               <H1 style="text-align: center;padding-top: 100px;"> Welcome to ATN Shop </H1>
-            </p>
-        </div>
+        {{>header}}<br/>
+        <h1>HOME PAGE</h1>
+        <h1>Welcome to ATN Shop</h1>
     </main>
-    
-
-    {{>footer}}
 </body>
 
 </html>

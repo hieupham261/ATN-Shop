@@ -7,15 +7,21 @@
 </head>
 
 <body>
-    {{>header}}
-    <img width=1000px src="circuit-smartwatering.jpg"/>
-    <H1> Cac noi dung trong trang web</H1>
-        <ul>
-            {{#each people}}
-            <li>{{this}}</li>
-            {{/each}}
-        </ul>
-    {{>footer}}
+    <form>
+        <table>
+            <tr>
+                <td><label for="Username">Username</label></td>
+                <td><input type="text" name="Username" id="Username" placeholder="Username"></td>
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="password" name="Password" id="Password" placeholder="Password"/></td>
+            </tr>
+            <tr>
+                <td><a href="/product"><input type="button" value="Login"/></a></td>
+            </tr>
+        </table> 
+    </form>  
 </body>
 
 </html>

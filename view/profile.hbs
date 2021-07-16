@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
-{{>head title=this.title subpage='Page X' }}
+{{>head title=this.title subpage='About US' }}
 
+<style> 
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIXN4ty7JTDAOxDMlY4L6s_8nDh_PB2w06Q&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table{
+    left: 40%;
+    text-align: center;
+    position: relative;
+}
+</style>
+{{>header}}
 <body>
-    {{>header  title=this.title}}
-
     <main>
-        <H1>{{title}}</H1>
+        <h1>About US</h1>
+        <table>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>  
+                    <div><h5>Email: ATN_Shop@gmail.com</h5></div>
+                    <div><h5>Location:  123 Pham Van Dong</h5></div>
+                    <div><h5>Phone: 12345678</h5></div>
+                    <div><h5>Fax: 12345678</h5></div>
+                    <div><h5>Contact Me: ATN_Shop</h5></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                               
+                </td>
+            </tr>
+        </table>
         
     </main>
     
-
-    {{>footer}}
 </body>
 
 </html>
